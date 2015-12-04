@@ -1,0 +1,27 @@
+{
+    "name": "parallaxsolutions/yii2-boletos",
+    "description": "Extensão de boletos para yii2",
+    "keywords": [
+        "yii2",
+        "boletos"
+    ],
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Welsiton Ferreira",
+            "email": "welsiton@parallaxsolutions.com.br"
+        },
+		{
+            "name": "Stenyo",
+            "email": "stenyo@parallaxsolutions.com.br"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "parallaxsolutions\\boletos\\": ""
+        }
+    }
+}
