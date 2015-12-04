@@ -1,6 +1,6 @@
 {
     "name": "parallaxsolutions/yii2-boletos",
-    "description": "Extensão de boletos para yii2",
+    "description": "Boletos para yii2",
     "keywords": [
         "yii2",
         "boletos"
@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
+        "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-4": {
