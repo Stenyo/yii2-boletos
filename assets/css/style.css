@@ -1,0 +1,184 @@
+.cp {  
+    font: bold 10px Arial; 
+    color: black
+}
+.ti { 
+    font: 9px Arial, Helvetica, sans-serif
+}
+.ld { 
+    font: bold 15px Arial; color: #000000
+}
+.ct { 
+    FONT: 9px "Arial Narrow"; COLOR: #000033
+}
+.cn { 
+    FONT: 9px Arial; COLOR: black 
+}
+.bc { 
+    font: bold 20px Arial; color: #000000 
+}
+.ld2 { 
+    font: bold 12px Arial; color: #000000 
+}
+
+.scape-text-left-7{
+    padding-left: 7px;
+}
+
+.scape-text-left-11{
+    padding-left: 11px;
+}
+.scape-text-left-20{
+    padding-left: 20px;
+}
+.scape-text-right{
+    padding-right: 7px;
+}
+.celula-full{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.celula-bottom{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+}
+
+.celula-right{
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: black;    
+}
+
+.celula-left{
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: black; 
+}
+
+.celula-top{
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 1px;
+}
+.celula-full-dashed{
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+}
+
+.celula-bottom-dashed{
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+}
+
+.celula-rigth-dashed{
+    border-right: dashed;
+    border-right-width: 1px;
+    border-right-color: black;    
+}
+
+.celula-left-dashed{
+    border-left: dashed;
+    border-left-width: 1px;
+    border-left-color: black; 
+}
+
+.celula-top-dashed{
+    border-top-style: dashed;
+    border-top-color: black;
+    border-top-width: 1px;
+}
+
+.imagem-center{
+    margin: 1px 0;
+}
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+}
+.fancy span {
+    display: inline-block;
+    position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    top: 0;
+    width: 600px;
+}
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+.back {
+    position: relative;
+    z-index: 1;
+}
+.back:before {
+    border-top: 1px solid black;
+    content: "";
+    margin: 0 auto;
+    /* this centers the line to the full width specified */
+    position: absolute;
+    /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+.back span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    background: #fff;
+    padding: 0 15px;
+}
+
+.image-santander{
+    content:url(imagens/santander-logo.png);
+}
+
+.logo-empresa{
+    content:url(imagens/santander-logo.png);
+}
+
+@media print {
+    .barra-b {
+        -webkit-print-color-adjust: exact; 
+    }
+    .barra-p {
+        -webkit-print-color-adjust: exact; 
+    }
+}
+
+.barra-b{
+    background: url('../images/b.png');
+    display: inline-block;
+}
+
+.barra-p{
+    background: url('../images/p.png');
+    display: inline-block;
+}
+
+.image-santander{
+    content:url('../images/santander-logo.png');
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }    
+}
