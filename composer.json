@@ -18,7 +18,8 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "mysidia/php-collections-framework": "*"
+        "umbrella/boleto": "~1.4",
+        "umbrella/retorno-boleto": "~1.3"
     },
     "autoload": {
         "psr-4": {
