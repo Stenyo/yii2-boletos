@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "parallaxsolutions\\boletos\\": ""
+            "parallaxsolutions\\yii2boletos\\": ""
         }
     }
 }

@@ -1,4 +1,5 @@
 <?php
+namespace parallaxsolutions\boletos\models;
 
 class Math {
 
