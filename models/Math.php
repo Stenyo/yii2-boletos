@@ -1,5 +1,5 @@
 <?php
-namespace parallaxsolutions\boletos\models;
+namespace parallaxsolutions\yii2boletos\models;
 
 class Math {
 

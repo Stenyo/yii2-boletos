@@ -1,5 +1,7 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\layouts\cnab240;
+use parallaxsolutions\yii2boletos\models\layouts\ILayoutSegmentoT;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
 /**
  * @property int $agencia_mantenedora_da_conta
  * @property int $digito_verificador_da_agencia_1

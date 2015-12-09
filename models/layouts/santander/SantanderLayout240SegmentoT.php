@@ -1,4 +1,8 @@
 <?php
+namespace parallaxsolutions\yii2boletos\models\layouts\santander;
+use parallaxsolutions\yii2boletos\models\layouts\cnab240\Layout240SegmentoT;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
+use parallaxsolutions\yii2boletos\models\SantanderConstants;
 
 /**
  * @property string $conta_cobranca

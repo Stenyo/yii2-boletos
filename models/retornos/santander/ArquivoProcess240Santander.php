@@ -1,5 +1,6 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\retornos\santander;
+use parallaxsolutions\yii2boletos\models\retornos\ArquivoProcess240;
 class ArquivoProcess240Santander extends ArquivoProcess240 {
 
     /**

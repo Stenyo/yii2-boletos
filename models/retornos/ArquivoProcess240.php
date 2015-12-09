@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\retornos;
 abstract class ArquivoProcess240 implements IArquivoProcess {
 
     /**

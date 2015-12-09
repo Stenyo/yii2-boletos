@@ -1,6 +1,6 @@
 <?php
 
-namespace parallaxsolutions\boletos\models\ar;
+namespace parallaxsolutions\yii2boletos\models\ar;
 
 use Yii;
 

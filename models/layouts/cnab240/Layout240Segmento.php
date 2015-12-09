@@ -1,5 +1,8 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\layouts\cnab240;
+use parallaxsolutions\yii2boletos\models\BaseModel;
+use parallaxsolutions\yii2boletos\models\layouts\ILayoutSegmento;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
 /**
  * @property int $codigo_do_banco_na_compensacao
  * @property int $lote_de_servico

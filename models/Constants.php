@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models;
 abstract class Constants {
 
     const CODIGO_BANCO_SANTANDER = "033"; //Antigamente era 353

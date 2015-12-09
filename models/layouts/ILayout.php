@@ -1,5 +1,7 @@
 <?php
+namespace parallaxsolutions\yii2boletos\models\layouts;
 
+;
 interface ILayout extends IRenderable, IReadable {
 
     /**

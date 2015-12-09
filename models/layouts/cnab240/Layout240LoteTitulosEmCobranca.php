@@ -1,5 +1,11 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\layouts\cnab240;
+//use parallaxsolutions\yii2boletos\models\layouts\cnab240\Layout240Lote;
+//use parallaxsolutions\yii2boletos\models\layouts\cnab240\Layout240SegmentoT;
+//use parallaxsolutions\yii2boletos\models\layouts\cnab240\Layout240SegmentoU;
+use parallaxsolutions\yii2boletos\models\layouts\IRenderable;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
+use parallaxsolutions\yii2boletos\models\layouts\ILayoutLoteTituloEmCobranca;
 /**
  * @property int $header_codigo_do_banco_na_compensacao
  * @property int $header_lote_de_servico

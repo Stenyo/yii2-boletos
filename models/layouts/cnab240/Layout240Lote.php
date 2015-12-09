@@ -1,4 +1,8 @@
 <?php
+namespace parallaxsolutions\yii2boletos\models\layouts\cnab240;
+use parallaxsolutions\yii2boletos\models\BaseModel;
+use parallaxsolutions\yii2boletos\models\layouts\ILayoutLote;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
 
 abstract class Layout240Lote extends BaseModel implements ILayoutLote {
 

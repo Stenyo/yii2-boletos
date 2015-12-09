@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\layouts;
 interface IReadable {
 
     const EOL_WIN = "\r\n";

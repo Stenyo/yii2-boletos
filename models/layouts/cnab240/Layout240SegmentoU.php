@@ -1,5 +1,7 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models\layouts\cnab240;
+use parallaxsolutions\yii2boletos\models\layouts\ILayoutSegmentoU;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
 /**
  * @property int $juros_multa_encargos
  * @property int $valor_do_desconto_concedido

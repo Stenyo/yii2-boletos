@@ -1,6 +1,7 @@
 <?php
-
-abstract class BaseModel extends CModel {
+namespace parallaxsolutions\yii2boletos\models;
+use yii\base\Object;
+abstract class BaseModel extends Object {
 
     private $_attributes = array();
 

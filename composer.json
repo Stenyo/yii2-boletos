@@ -11,13 +11,14 @@
             "name": "Welsiton Ferreira",
             "email": "welsiton@parallaxsolutions.com.br"
         },
-		{
+        {
             "name": "Stenyo Oliveira",
             "email": "stenyo@parallaxsolutions.com.br"
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "mysidia/php-collections-framework": "*"
     },
     "autoload": {
         "psr-4": {

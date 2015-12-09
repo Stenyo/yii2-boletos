@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,6 +11,7 @@
  *
  * @author stenyo
  */
+
 class Utils {
 
     public static function removeAcentos($string) {

@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models;
 class SantanderConstants {
 
     const CODIGO_DO_BANCO = '033';

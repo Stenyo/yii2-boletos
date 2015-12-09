@@ -1,4 +1,8 @@
 <?php
+namespace parallaxsolutions\yii2boletos\models\layouts\santander;
+use parallaxsolutions\yii2boletos\models\layouts\cnab240\Layout240SegmentoU;
+use parallaxsolutions\yii2boletos\models\layouts\IReadable;
+use parallaxsolutions\yii2boletos\models\SantanderConstants;
 
 class SantanderLayout240SegmentoU extends Layout240SegmentoU {
 

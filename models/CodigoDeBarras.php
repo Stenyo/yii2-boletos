@@ -1,5 +1,5 @@
 <?php
-
+namespace parallaxsolutions\yii2boletos\models;
 class CodigoDeBarras {
 
     public $fino = 1;
