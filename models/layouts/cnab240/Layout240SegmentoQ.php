@@ -43,27 +43,6 @@ class Layout240SegmentoQ extends Layout240Segmento implements IRenderable, ILayo
         }
     }
 
-    public function rules() {
-        return parent::rules() + array(
-            array('tipo_de_inscricao_do_sacado,numero_de_inscricao_do_sacado,nome,endereco,bairro,cep,sufixo_do_cep,cidade,unidade_da_federacao,tipo_de_inscricao_sacador_avalista,numero_de_inscricao_sacador_avalista,nome_do_sacador_avalista,codigo_do_banco_correspondente_na_compensacao,nosso_numero_no_banco_correspodente,uso_exclusivo_febraban_cnab_2', 'required'),
-            array('tipo_de_inscricao_do_sacado', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('tipo_de_inscricao_do_sacado', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('nome', 'length', 'min' => 0, 'max' => 40),
-            array('endereco', 'length', 'min' => 0, 'max' => 40),
-            array('bairro', 'length', 'min' => 0, 'max' => 15),
-            array('cep', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('sufixo_do_cep', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999),
-            array('cidade', 'length', 'min' => 0, 'max' => 15),
-            array('unidade_da_federacao', 'length', 'min' => 2, 'max' => 2),
-            array('tipo_de_inscricao_sacador_avalista', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_de_inscricao_sacador_avalista', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('nome_do_sacador_avalista', 'length', 'min' => 0, 'max' => 40),
-            array('codigo_do_banco_correspondente_na_compensacao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999),
-            array('nosso_numero_no_banco_correspodente', 'length', 'min' => 20, 'max' => 20),
-            array('uso_exclusivo_febraban_cnab_1', 'length', 'min' => 8, 'max' => 8),
-        );
-    }
-
     public function attributeNames() {
         return array_merge(parent::attributeNames(), array(
             'tipo_de_inscricao_do_sacado',

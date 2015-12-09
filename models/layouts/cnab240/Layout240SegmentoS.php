@@ -26,10 +26,6 @@ class Layout240SegmentoS extends Layout240Segmento implements IRenderable, ILayo
         $this->_impressao = $_impressao;
     }
 
-    public function rules() {
-        return parent::rules();
-    }
-
     public function render() {
         $out = '';
         $out .= str_pad($this->codigo_do_banco_na_compensacao, 3, '0', STR_PAD_LEFT);

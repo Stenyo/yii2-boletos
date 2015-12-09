@@ -48,33 +48,6 @@ class Layout240SegmentoR extends Layout240Segmento implements IRenderable, ILayo
         }
     }
 
-    public function rules() {
-        return parent::rules() + array(
-            array('codigo_do_desconto_2,data_do_desconto_2,valor_percentual_a_ser_concedido_1,codigo_do_desconto_3,data_do_desconto_3,valor_percentual_a_ser_concedido_2,codigo_da_multa,data_da_multa,valor_percentual_a_ser_aplicado,informacao_ao_sacado,mensagem_3,mensagem_4,uso_exclusivo_febraban_cnab_2,codigo_ocor_do_sacado,codigo_do_banco_na_conta_do_debito,codigo_da_agencia_do_debito,digito_verificador_da_agencia,conta_corrente_para_debito,digito_verificador_da_conta,digito_verificador_ag_conta,aviso_para_debito_automatico,uso_exclusivo_febraban_cnab_3', 'required'),
-            array('codigo_do_desconto_2', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('data_do_desconto_2', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_percentual_a_ser_concedido_1', 'numerical', 'min' => 0, 'max' => 999999999999999),
-            array('codigo_do_desconto_3', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('data_do_desconto_3', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_percentual_a_ser_concedido_2', 'numerical', 'min' => 0, 'max' => 999999999999999),
-            array('codigo_da_multa', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('data_da_multa', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_percentual_a_ser_aplicado', 'numerical', 'min' => 0, 'max' => 999999999999999),
-            array('informacao_ao_sacado', 'length', 'min' => 0, 'max' => 10),
-            array('mensagem_3', 'length', 'min' => 0, 'max' => 40),
-            array('mensagem_4', 'length', 'min' => 0, 'max' => 40),
-            array('uso_exclusivo_febraban_cnab_1', 'length', 'min' => 40, 'max' => 40),
-            array('codigo_ocor_do_sacado', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999),
-            array('codigo_do_banco_na_conta_do_debito', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('digito_verificador_da_agencia', 'length', 'min' => 1, 'max' => 1),
-            array('conta_corrente_para_debito', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999),
-            array('digito_verificador_da_conta', 'length', 'min' => 1, 'max' => 1),
-            array('digito_verificador_ag_conta', 'length', 'min' => 1, 'max' => 1),
-            array('aviso_para_debito_automatico', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('uso_exclusivo_febraban_cnab_2', 'length', 'min' => 9, 'max' => 9),
-        );
-    }
-
     public function attributeNames() {
         return array_merge(parent::attributeNames(), array(
             'codigo_do_desconto_2',

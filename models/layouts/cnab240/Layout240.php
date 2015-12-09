@@ -84,43 +84,6 @@ class Layout240 extends BaseModel implements ILayout {
         }
     }
 
-    public function rules() {
-        return array(
-            array('header_codigo_do_banco_na_compensacao,header_lote_de_servico,header_tipo_de_registro,header_uso_exclusivo_febraban_cnab_1,header_tipo_de_inscricao_da_empresa,header_numero_de_inscricao_da_empresa,header_codigo_do_convenio_no_banco,header_agencia_mantenedora_da_conta,header_digito_verificador_da_agencia,header_numero_da_conta_corrente,header_digito_verificador_da_conta,header_digito_verificador_da_agencia_conta,header_nome_da_empresa,header_nome_do_banco,header_uso_exclusivo_febraban_cnab_2,header_codigo_remessa_retorno,header_data_de_geracao_do_arquivo,header_hora_de_geracao_do_arquivo,header_numero_sequencial_do_arquivo,header_numero_da_versao_do_layout_do_arquivo,header_densidade_de_gravacao_do_arquivo,header_para_uso_reservado_do_banco,header_para_uso_reservado_da_empresa,header_uso_exclusivo_febraban_cnab_3,trailer_codigo_do_banco_na_compensacao,trailer_lote_de_servico,trailer_tipo_de_registro,trailer_uso_exclusivo_febraban_cnab_1,trailer_quantidade_de_lotes_de_arquivo,trailer_quantidade_de_registros_do_arquivo,trailer_quantidade_de_contas_para_conciliacao_lotes,trailer_uso_exclusivo_febraban_cnab_2', 'required'),
-            array('header_codigo_do_banco_na_compensacao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999),
-            array('header_lote_de_servico', 'in', 'range' => array(self::HEADER_LOTE_DE_SERVICO), 'allowEmpty' => false),
-            array('header_tipo_de_registro', 'in', 'range' => array(self::HEADER_TIPO_DE_REGISTRO), 'allowEmpty' => false),
-            array('header_uso_exclusivo_febraban_cnab_1', 'length', 'max' => 9, 'min' => 9),
-            array('header_tipo_de_inscricao_da_empresa', 'in', 'range' => array('1', '2'), 'allowEmpty' => false),
-            array('header_numero_de_inscricao_da_empresa', 'length', 'max' => 14, 'min' => 14),
-            array('header_codigo_do_convenio_no_banco', 'length', 'max' => 20, 'min' => 20),
-            array('header_agencia_mantenedora_da_conta', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('header_digito_verificador_da_agencia', 'length', 'min' => 1, 'max' => 1),
-            array('header_numero_da_conta_corrente', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999),
-            array('header_digito_verificador_da_conta', 'length', 'min' => 1, 'max' => 1),
-            array('header_digito_verificador_da_agencia_conta', 'length', 'min' => 1, 'max' => 1),
-            array('header_nome_da_empresa', 'length', 'min' => 0, 'max' => 30),
-            array('header_nome_do_banco', 'length', 'min' => 0, 'max' => 30),
-            array('header_uso_exclusivo_febraban_cnab_2', 'length', 'max' => 10, 'min' => 10),
-            array('header_codigo_remessa_retorno', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('header_data_de_geracao_do_arquivo', 'date', 'format' => 'ddMMyyyy'),
-            array('header_hora_de_geracao_do_arquivo', 'date', 'format' => 'HHmmss'),
-            array('header_numero_sequencial_do_arquivo', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('header_n_da_versao_do_layout_do_arquivo', 'in', 'range' => self::NUMERO_DA_VERSAO_DO_LAYOUT_DO_ARQUIVO, 'allowEmpty' => false),
-            array('header_para_uso_reservado_do_banco', 'length', 'max' => '20'),
-            array('header_para_uso_reservado_da_empresa', 'length', 'max' => '20'),
-            array('header_uso_exclusivo_febraban_cnab_3', 'length', 'max' => '29'),
-            array('trailer_codigo_do_banco_na_compensacao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999),
-            array('trailer_lote_de_servico', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999),
-            array('trailer_tipo_de_registro', 'in', 'range' => self::TRAILER_TIPO_DE_REGISTRO, 'allowEmpty' => false),
-            array('trailer_uso_exclusivo_febraban_cnab_1', 'length', 'max' => '9'),
-            array('trailer_quantidade_de_lotes_de_arquivo', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_quantidade_de_registros_do_arquivo', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_quantidade_de_contas_para_conciliacao_lotes', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_uso_exclusivo_febraban_cnab_2', 'length', 'max' => '205'),
-        );
-    }
-
     public function attributeNames() {
         return array(
             'header_codigo_do_banco_na_compensacao',

@@ -23,21 +23,6 @@ class Layout240SegmentoY05 extends Layout240Segmento implements IReadable, ILayo
         $this->uso_exclusivo_febraban_cnab_1 = str_repeat(' ', 17);
     }
 
-    public function rules() {
-        return parent::rules() + array(
-            array('identificacao_registro_opcional,identificacao_do_cheque_1,identificacao_do_cheque_2,identificacao_do_cheque_3,identificacao_do_cheque_4,identificacao_do_cheque_5,identificacao_do_cheque_6,uso_exclusivo_febraban_cnab_2', 'required'),
-            array('identificacao_registro_opcional', 'numerical', 'integerOnly', 'min' => 0, 'max' => 99),
-            array('identificacao_do_cheque_1', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_2', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_3', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_4', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_5', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_6', 'lenght', 'min' => 34, 'max' => 34),
-            array('identificacao_do_cheque_6', 'numerical', 'integerOnly', 'min' => 0, 'max' => 9999999999999999999999999999999999),
-            array('uso_exclusivo_febraban_cnab_1', 'length', 'integerOnly', 'min' => 7, 'max' => 7),
-        );
-    }
-
     public function attributeNames() {
         return array_merge(parent::attributeNames(), array(
             'identificacao_registro_opcional',

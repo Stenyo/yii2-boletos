@@ -49,45 +49,6 @@ class Layout240SegmentoP extends Layout240Segmento implements IRenderable, ILayo
         $this->uso_exclusivo_febraban_cnab = str_repeat(' ', 1);
     }
 
-    public function rules() {
-        return array(
-            array('agencia_mantenedora_da_conta', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('digito_verificador_da_agencia_1', 'length', 'max' => 1),
-            array('numero_da_conta_corrente', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999),
-            array('digito_verificador_da_conta', 'length', 'max' => 1),
-            array('digito_verificador_da_ag_conta', 'length', 'max' => 1),
-            array('identificacao_do_titulo_no_banco', 'length', 'min' => 20, 'max' => 20),
-            array('codigo_da_carteira', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('forma_de_cadastamento_do_titulo_no_banco', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('tipo_de_documento', 'length', 'max' => 1),
-            array('identificacao_da_emissao_do_bloqueto', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('identificacao_da_distribuicao', 'length', 'max' => 1),
-            array('numero_do_doucumento_de_cobranca', 'length', 'max' => 15),
-            array('data_de_vencimento_do_titulo', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_nominal_do_titulo', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('agencia_encarregada_da_cobranca', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('digito_verificador_da_agencia_2', 'length', 'max' => 1),
-            array('especie_do_titulo', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('identificacao_de_titulo_aceito_ou_nao_aceito', 'length', 'max' => 1),
-            array('data_de_vencimento_do_titulo', 'date', 'format' => 'ddMMyyyy'),
-            array('codigo_do_juros_de_mora', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('juros_de_mora_por_dia_taxa', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('codigo_do_desconto_1', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('data_do_desconto_1', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_percentual_a_ser_concedido', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('valor_do_iof_a_ser_recolhido', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('valor_do_abatimento', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('identificacao_do_titulo_na_empresa', 'length', 'max' => 25),
-            array('codigo_para_protesto', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_de_dias_para_protesto', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('codigo_para_baixa_devolucao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_de_dias_para_baixa_devolucao', 'length', 'max' => 3),
-            array('codigo_da_moeda', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('numero_do_contrato_da_operacao_de_credito', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999999999),
-            array('uso_livre_banco_empresa_ou_autorizacao_de_pagamento_parcial', 'length', 'max' => 1),
-        );
-    }
-
     public function attributeNames() {
         return array_merge(parent::attributeNames(), array(
             'agencia_mantenedora_da_conta',

@@ -15,17 +15,6 @@ class Layout240SegmentoSImpressao1 extends BaseModel implements IRenderable {
         $this->uso_exclusivo_febraban_cnab = str_repeat(' ', 78);
     }
 
-    public function rules() {
-        return array(
-            array('identificacao_da_impressao,numero_da_linha_a_ser_impressa,mensagem_a_ser_impressa,tipo_do_caracter_a_ser_impresso,uso_exclusivo_febraban_cnab','required'),
-            array('identificacao_da_impressao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_da_linha_a_ser_impressa', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('mensagem_a_ser_impressa', 'length', 'max' => 140),
-            array('tipo_do_caracter_a_ser_impresso', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('uso_exclusivo_febraban_cnab', 'length', 'max' => 140),
-        );
-    }
-
     public function attributeNames() {
         return array(
             'identificacao_da_impressao',

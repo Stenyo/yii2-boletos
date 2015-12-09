@@ -72,48 +72,6 @@ class Layout240LoteTitulosEmCobranca extends Layout240Lote implements IRenderabl
                 $this->$propriedade = $valor;
         }
     }
-    
-    public function rules() {
-        return array(
-            array('header_codigo_do_banco_na_compensacao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999),
-            array('header_lote_de_servico', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999),
-            array('header_tipo_de_registro', 'in', 'range' => array(self::HEADER_TIPO_DE_REGISTRO), 'allowEmpty' => false),
-            array('header_tipo_de_operacao', 'length', 'max' => 1),
-            array('header_tipo_de_servico', 'in', 'range' => array(self::TIPO_DE_SERVICO), 'allowEmpty' => false),
-            array('header_uso_exclusivo_febraban_cnab_1', 'length', 'max' => 2),
-            array('header_numero_da_versao_do_layout_do_lote', 'in', 'range' => array(self::HEADER_TIPO_DE_REGISTRO), 'allowEmpty' => false),
-            array('header_tipo_de_inscricao_da_empresa', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('header_numero_de_inscricao_da_empresa', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('header_codigo_do_convenio_no_banco', 'length', 'max' => 20),
-            array('header_agencia_mantenedora_da_conta', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('header_digito_verificador_da_conta_1', 'length', 'max' => 1),
-            array('header_numero_da_conta_corrente', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999),
-            array('header_digito_verificador_da_conta_2', 'length', 'max' => 1),
-            array('header_digito_verificador_da_agencia_conta', 'length', 'max' => 1),
-            array('header_nome_da_empresa', 'length', 'max' => 30),
-            array('header_mensagem_1', 'length', 'max' => 40),
-            array('header_mensagem_2', 'length', 'max' => 40),
-            array('header_numero_remessa_retorno', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999),
-            array('header_data_da_gravacao_remessa_retorno', 'date', 'format' => 'ddMMyyyy'),
-            array('header_data_do_credito', 'date', 'format' => 'ddMMyyyy'),
-            array('header_uso_exclusivo_febraban_cnab_3', 'length', 'max' => 33),
-            array('trailer_codigo_do_banco_na_compensacao', 'in', 'range' => array(SantanderConstants::CODIGO_DO_BANCO), 'allowEmpty' => false),
-            array('trailer_lote_de_servico', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999),
-            array('trailer_tipo_de_registro', 'in', 'range' => self::TRAILER_TIPO_DE_REGISTRO, 'allowEmpty' => false),
-            array('trailer_uso_exclusivo_febraban_cnab_1', 'length', 'max' => 9),
-            array('trailer_quantidade_de_registros_no_lote', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_cobranca_simples_quantidade_de_titulos_em_cobranca', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_cobranca_simples_valor_total_dos_titulos_em_carteiras', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999999999999),
-            array('trailer_cobranca_vinculada_quantidade_de_titulos_em_cobranca', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_cobranca_vinculada_valor_total_dos_titulos_em_carteiras', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999999999999),
-            array('trailer_cobranca_caucionada_quantidade_de_titulos_em_cobranca', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_cobranca_caucionada_valor_total_dos_titulos_em_carteiras', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999999999999),
-            array('trailer_cobranca_descontada_quantidade_de_titulos_em_cobranca', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999),
-            array('trailer_cobranca_descontada_valor_total_dos_titulos_em_carteiras', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999999999999999),
-            array('trailer_numero_do_aviso_de_lancamento', 'length', 'max' => 8),
-            array('trailer_uso_exclusivo_febraban_cnab_2', 'length', 'max' => 117),
-        );
-    }
 
     public function attributeNames() {
         return array(

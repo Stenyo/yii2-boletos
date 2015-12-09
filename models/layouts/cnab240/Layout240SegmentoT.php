@@ -34,34 +34,6 @@ class Layout240SegmentoT extends Layout240Segmento implements ILayoutSegmentoT {
         $this->codigo_segmento_do_registro_detalhe = Layout240Segmento::CODIGO_DO_SEGMENTO_DO_REGISTRO_T;
     }
 
-    public function rules() {
-        return parent::rules() + array(
-            array('agencia_mantenedora_da_conta,digito_verificador_da_agencia_do_beneficiario,numero_da_conta_corrente,digito_verificador_da_conta,digito_verificador_da_agencia_conta,identificacao_do_titulo ,codigo_da_carteira,numero_do_documento_de_cobranca,data_do_vencimento_do_titulo,valor_nominal_do_titulo,numero_do_banco,agencia_cobradora_recebedora,digito_da_agencia_do_beneficiario,identificacao_do_título_na_empresa,codigo_da_moeda,tipo_de_inscricao_do_sacado,numero_de_inscricao_do_sacado,nome_do_sacado,numero_do_contr._da_operacao_de_credito,valor_da_tarifa_custas,identificacao_para_rejeicoes,_tarifas,_custas,_liquidacoes_e_baixas,uso_exclusivo_fernaban_cnba_2', 'required'),
-            array('digito_verificador_da_agencia_1', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('digito_verificador_da_agencia_do_beneficiario', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_da_conta_corrente', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999),
-            array('digito_verificador_da_conta', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('digito_verificador_da_agencia_conta', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('identificacao_do_titulo ', 'length', 'min' => 20, 'max' => 20),
-            array('codigo_da_carteira', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_do_documento_de_cobranca', 'length', 'min' => 15, 'max' => 15),
-            array('data_do_vencimento_do_titulo', 'date', 'format' => 'ddMMyyyy'),
-            array('valor_nominal_do_titulo', 'numerical', 'min' => 0, 'max' => 999999999999999),
-            array('numero_do_banco', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999999999999),
-            array('agencia_cobradora_recebedora', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('digito_verificador_da_agencia_2', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99999),
-            array('identificacao_do_titulo_na_empresa', 'length', 'min' => 25, 'max' => 25),
-            array('codigo_da_moeda', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 99),
-            array('tipo_de_inscricao_do_sacado', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('numero_de_inscricao_do_sacado', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 999999999999999),
-            array('nome_do_sacado', 'length', 'min' => 40, 'max' => 40),
-            array('numero_do_contrato_da_operacao_de_credito', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9999999999),
-            array('valor_da_tarifa_custas', 'numerical', 'min' => 0, 'max' => 999999999999999),
-            array('identificacao_para_rejeicoes_tarifas_custas_liquidacoes_e_baixas', 'length', 'min' => 10, 'max' => 10),
-            array('uso_exclusivo_fernaban_cnba_1', 'length', 'min' => 17, 'max' => 17),
-        );
-    }
-
     public function attributeNames() {
         return array_merge(parent::attributeNames(), array(
             'agencia_mantenedora_da_conta',

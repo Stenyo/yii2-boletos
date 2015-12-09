@@ -181,7 +181,7 @@ class CodigoDeBarras {
                 $numero = $insert . $numero;
             }
         }
-        if ($tipo == "valor") {
+        else if ($tipo == "valor") {
             /*
               retira as virgulas
               formata o numero
@@ -192,7 +192,7 @@ class CodigoDeBarras {
                 $numero = $insert . $numero;
             }
         }
-        if ($tipo == "convenio") {
+        else if ($tipo == "convenio") {
             while (strlen($numero) < $loop) {
                 $numero = $numero . $insert;
             }

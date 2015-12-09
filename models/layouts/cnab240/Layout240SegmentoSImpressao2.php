@@ -31,20 +31,7 @@ class Layout240SegmentoSImpressao2 extends BaseModel implements IRenderable {
                 $this->$propriedade = $valor;
         }
     }
-
-    public function rules() {
-        return array(
-            array('identificacao_da_impressao,mensagem_5,mensagem_6,mensagem_7,mensagem_8,mensagem_9,uso_exclusivo_febraban_cnab', 'required'),
-            array('identificacao_da_impressao', 'numerical', 'integerOnly' => true, 'min' => 0, 'max' => 9),
-            array('mensagem_5', 'length', 'max' => 40),
-            array('mensagem_6', 'length', 'max' => 40),
-            array('mensagem_7', 'length', 'max' => 40),
-            array('mensagem_8', 'length', 'max' => 40),
-            array('mensagem_9', 'length', 'max' => 40),
-            array('uso_exclusivo_febraban_cnab', 'length', 'min' => 22, 'max' => 22),
-        );
-    }
-
+    
     public function attributeNames() {
         return array(
             'identificacao_da_impressao',

@@ -12,8 +12,9 @@
  * @author stenyo
  */
 class Utils {
-     public static function removeAcentos($string) {
-        $string = utf8_decode(mb_strtolower($string)); 
+
+    public static function removeAcentos($string) {
+        $string = utf8_decode(mb_strtolower($string));
 
         // Código ASCII das vogais
         $ascii['a'] = range(224, 230);
@@ -35,11 +36,11 @@ class Utils {
                 $acentos .= chr($codigo);
             $troca[$key] = '/[' . $acentos . ']/i';
         }
-        
+
         $string = preg_replace(array_values($troca), array_keys($troca), $string);
         $string = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $string);
-     
 
         return utf8_encode($string);
     }
+
 }
