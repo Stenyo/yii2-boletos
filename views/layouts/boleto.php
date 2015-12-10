@@ -1,14 +1,17 @@
-<html>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="<?= Yii::$app->charset ?>">
+        <title></title>
+        <?php $this->head() ?>
     </head>
-    <body text="#000000" bgColor="#ffffff" topMargin="0" rightMargin="0">
-        <?php
-        $this->pageTitle = '';
-        Yii::app()->clientScript->reset();
-        Yii::app()->clientScript->registerPackage('yii-boleto');
-
-        echo $content;
-        ?>
+    <body>
+        <?php $this->beginBody() ?>
+        <div id="container">
+            <?= $content; ?>
+        </div>
+        <?php $this->endBody() ?>
     </body>
 </html>
+<?php $this->endPage() ?>

@@ -1,0 +1,8 @@
+{% extends "fichaCompensacao.html.twig" %}
+
+{% block logo %}
+    {{ use('parallaxsolutions/yii2boletos/bundles/DefaultBoletoAsset') }}
+    {% set baseUrl = register_default_boleto_asset().baseUrl %}
+    
+    <img src="{{baseUrl}}/images/santander.png" >
+{% endblock %}
