@@ -18,8 +18,8 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "umbrella/boleto": "~1.4",
-        "umbrella/retorno-boleto": "~1.3"
+        "umbrella/boleto": "~1.6.*",
+        "umbrella/retorno-boleto": "~1.3.*"
     },
     "autoload": {
         "psr-4": {

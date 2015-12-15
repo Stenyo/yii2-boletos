@@ -1,8 +1,8 @@
 {% block compensacao %}
-<div id="ficha_compensacao">
-    <!--  cabecalho  -->
-    <div class="cabecalho">
-        <div class="banco_logo ">
+    <div id="ficha_compensacao">
+        <!--  cabecalho  -->
+        <div class="cabecalho">
+            <div class="banco_logo ">
             {% block logo%}{% endblock %}
         </div>
         <div class="banco_codigo ">{{ model.getConvenio().getBanco().getNumero()}} - {{ model.getConvenio().getBanco().getCodigo() }}</div>
@@ -29,7 +29,7 @@
             <!--data emissao-->
             <div class="data_doc item">
                 <label>Data do documento</label>
-               {{ model.getDataDocumento()|date('d/m/Y') }}
+                {{ model.getDataDocumento()|date('d/m/Y') }}
             </div>
             <!--numdocumento-->
             <div class="num_doc item">
@@ -78,7 +78,7 @@
             <!--valor-->
             <div class="valor item">
                 <label>(x) Valor</label>
-                {{ model.getValorDocumento()|number_format }}
+                {{ model.getValorDocumento() | number_format(2, ',', '.') }}
             </div>
         </div>
 
@@ -95,39 +95,39 @@
     <div id="colunadireita" class="">
         <div class="">
             <label>Vencimento</label>
-            {{ model.getVencimento()|date("d/m/Y") }}
+            {{ model.getDataVencimento()|date("d/m/Y") }}
         </div>
         <div class="">
             <label>Agência / Código cedente </label>
-            {{ model.getConvenio().getBanco().getAgenciaCodigoCedente() }}
+            {{ model.getConvenio().getConvenio() }}
         </div>
         <div class="">
             <label>Nosso número</label>
-            {{ model.getConvenio().getCarteira().getNossoNumero() }}
+            {{ model.getConvenio().getNossoNumero() }}
         </div>
         <div class="">
             <label>(=) Valor do documento</label>
-            {{ model.getValorDocumento()|number_format }}
+            {{ model.getValorDocumento() | number_format(2, ',', '.') }}
         </div>
         <div class="">
             <label>(-) Desconto/Abatimento</label>
-            {{ model.getDesconto()|number_format }}
+            {{ model.getDesconto() | number_format(2, ',', '.') }}
         </div>
         <div class="">
             <label>(-) Outras deduções</label>
-            {{ model.getOutrasDeducoes()|number_format }}
+            {{ model.getOutrasDeducoes() | number_format(2, ',', '.') }}
         </div>
         <div class="">
             <label>(+) Mora/Multa</label>
-            {{ model.getMulta()|number_format }}
+            {{ model.getMulta() | number_format(2, ',', '.') }}
         </div>
         <div class="">
             <label>(+) Outros Acréscimos</label>
-            {{ model.getOutrosAcrescimos()|number_format }}
+            {{ model.getOutrosAcrescimos() | number_format(2, ',', '.') }}
         </div>
         <div class="">
             <label>(=) Valor cobrado</label>
-            {{ model.getTotal()|number_format }}
+            {{ model.getTotal()| number_format(2, ',', '.') }}
         </div>
     </div>
 
