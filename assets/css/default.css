@@ -83,7 +83,7 @@ div#ficha_compensacao{
 
 
 /*Sacado*/
-#ficha_compensacao #sacado, #ficha_compensacao #codigo_barras{
+#ficha_compensacao #sacado, #ficha_compensacao #sacado_recibo, #ficha_compensacao #codigo_barras{
     clear:both;
     width:680px;
     height:70px;

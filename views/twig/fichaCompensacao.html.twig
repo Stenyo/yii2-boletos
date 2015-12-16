@@ -48,18 +48,13 @@
             </div>
             <!--data processamento-->
             <div class="dt_proc item">
-                <label>Data proc</label>
+                <label>Data de proce</label>
                 {{ "now"|date("d/m/Y") }}
             </div>
         </div>
 
         <!--  linha4  -->
         <div class="linha">
-            <!--uso do banco-->
-            <div class="uso_banco item">
-                <label>Uso do Banco</label>
-
-            </div>
             <!--carteira-->
             <div class="carteira item">
                 <label>Carteira</label>
@@ -95,11 +90,11 @@
     <div id="colunadireita" class="">
         <div class="">
             <label>Vencimento</label>
-            {{ model.getDataVencimento()|date("d/m/Y") }}
+            {{ model.getDataVencimento() | date("d/m/Y") }}
         </div>
         <div class="">
             <label>Agência / Código cedente </label>
-            {{ model.getConvenio().getConvenio() }}
+            {{ model.getConvenio().getBanco().getAgencia()}} / {{ model.getConvenio().getConvenio() }}
         </div>
         <div class="">
             <label>Nosso número</label>
@@ -148,11 +143,6 @@
         {% autoescape false %}
             {{ barcode.render(model.getCodigoBarras()) }}
         {% endautoescape  %}
-    </div>
-
-    <!--Linha pontilhada para corte-->
-    <div class="linha_corte">
-        <label>Corte na linha pontilhada</label>
     </div>
 
     <!--Encerra ficha de compensação-->    
